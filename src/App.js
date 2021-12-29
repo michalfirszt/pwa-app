@@ -1,7 +1,13 @@
 import React from 'react';
 
-function App() {
-  return <div>App</div>;
-}
+import NetworkState from './components/NetworkState';
+
+const App = () => {
+  return (
+    <div>
+      <NetworkState />
+    </div>
+  );
+};
 
 export default App;
