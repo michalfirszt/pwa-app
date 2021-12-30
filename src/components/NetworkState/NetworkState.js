@@ -15,7 +15,7 @@ const NetworkState = () => {
   const classes = useStyles({ online });
 
   return (
-    <div>
+    <div data-testid="network-status">
       NetworkState:{' '}
       <span className={classes.networkStatus}>
         {online ? 'Online' : 'Offline'}

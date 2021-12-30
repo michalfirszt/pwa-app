@@ -28,7 +28,7 @@ const Notes = () => {
   );
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} data-testid="notes">
       <div>
         <form onSubmit={handleOnSubmit}>
           <div>

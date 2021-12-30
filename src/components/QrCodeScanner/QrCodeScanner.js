@@ -36,7 +36,7 @@ const QrCodeScanner = () => {
   }, [handleOnDecode]);
 
   return (
-    <div>
+    <div data-testid="qr-code-scanner">
       <div>
         <button onClick={handleScannerStart}>Start</button>
         <button onClick={handleScannerStop}>Stop</button>

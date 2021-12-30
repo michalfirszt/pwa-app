@@ -60,7 +60,7 @@ const Map = ({ lat, lng }) => {
   }
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} data-testid="map">
       <GoogleMap
         mapContainerClassName={classes.map}
         center={{ lat, lng }}

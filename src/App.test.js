@@ -5,5 +5,5 @@ import App from './App';
 
 test('renders app text', () => {
   render(<App />);
-  expect(screen.getByText('App')).toBeInTheDocument();
+  expect(screen.getAllByTestId('network-status')).toBeInTheDocument();
 });

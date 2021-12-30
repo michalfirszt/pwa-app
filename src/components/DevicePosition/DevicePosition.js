@@ -47,7 +47,7 @@ const DevicePosition = () => {
   }, []);
 
   return (
-    <div>
+    <div data-testid="device-position">
       <div>alpha: {devicePosition.alpha}</div>
       <div>beta {devicePosition.beta}</div>
       <div>gamma {devicePosition.gamma}</div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 import DevicePosition from './components/DevicePosition';
-import Map from './components/Map';
 import NetworkState from './components/NetworkState';
 import Notes from './components/Notes';
 import QrCodeScanner from './components/QrCodeScanner';
@@ -31,11 +30,7 @@ const App = () => {
       <div>
         <QrCodeScanner />
       </div>
-      {latitude && longitude && (
-        <div>
-          <Map lat={latitude} lng={longitude} />
-        </div>
-      )}
+      {latitude && longitude && <div>Map</div>}
     </div>
   );
 };
