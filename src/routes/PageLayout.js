@@ -12,6 +12,7 @@ const useStyles = createUseStyles({
   },
   navbar: {
     display: 'flex',
+    flexWrap: 'wrap',
     padding: '8px',
   },
 });
@@ -23,6 +24,10 @@ const PageLayout = () => {
     <div className={classes.container}>
       <nav className={classes.navbar}>
         <NavbarItem to={paths.root}>Notes</NavbarItem>
+        <NavbarItem to={paths.network}>Network status</NavbarItem>
+        <NavbarItem to={paths.qrScanner}>Qr scanner</NavbarItem>
+        <NavbarItem to={paths.map}>Map</NavbarItem>
+        <NavbarItem to={paths.devicePosition}>Device position</NavbarItem>
       </nav>
       <div>
         <Outlet />
