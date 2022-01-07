@@ -1,38 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import DevicePosition from './components/DevicePosition';
-import NetworkState from './components/NetworkState';
-import Notes from './components/Notes';
-import QrCodeScanner from './components/QrCodeScanner';
+import AppRoutes from './routes';
 
-const App = () => {
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      setLatitude(position?.coords?.latitude);
-      setLongitude(position?.coords?.longitude);
-    });
-  }, []);
-
-  return (
-    <div>
-      <div>
-        <NetworkState />
-      </div>
-      <div>
-        <Notes />
-      </div>
-      <div>
-        <DevicePosition />
-      </div>
-      <div>
-        <QrCodeScanner />
-      </div>
-      {latitude && longitude && <div>Map</div>}
-    </div>
-  );
-};
+const App = () => (
+  <BrowserRouter>
+    <AppRoutes />
+  </BrowserRouter>
+);
 
 export default App;
