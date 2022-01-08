@@ -1,6 +1,9 @@
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { createUseStyles } from 'react-jss';
 import { useLocalStorage } from 'react-use';
+
+import { tKeys } from '../../constants';
 
 const useStyles = createUseStyles({
   container: {
@@ -11,6 +14,7 @@ const useStyles = createUseStyles({
 
 const Notes = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -50,7 +54,7 @@ const Notes = () => {
             />
           </div>
           <div>
-            <input type="submit" />
+            <input type="submit" value={t(tKeys.SAVE)} />
           </div>
         </form>
       </div>

@@ -26,18 +26,38 @@ const NotesPreview = () => {
       <div>
         <NetworkState />
       </div>
+      <hr />
+      <div>{t(tKeys.ADD)}</div>
+      <div>
+        <Notes />
+      </div>
+      <hr />
       <div>
         <select onChange={changeLanguage}>
           {languages.map((language, index) => (
-            <option key={index} value={language}>
+            <option selected={language === lng} key={index} value={language}>
               {language}
             </option>
           ))}
         </select>
       </div>
-      <div>{t(tKeys.ADD)}</div>
+      <hr />
       <div>
-        <Notes />
+        <div>
+          {t(tKeys.OPINION, {
+            count: 1,
+          })}
+        </div>
+        <div>
+          {t(tKeys.OPINION, {
+            count: 2,
+          })}
+        </div>
+        <div>
+          {t(tKeys.OPINION, {
+            count: 5,
+          })}
+        </div>
       </div>
     </div>
   );
