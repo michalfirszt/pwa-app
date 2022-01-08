@@ -1,16 +1,15 @@
 import React from 'react';
-import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from 'react-router-dom';
 
-import i18n from './i18n';
+import TranslationProvider from './providers/TranslationProvider';
 import AppRoutes from './routes';
 
 const App = () => (
-  <I18nextProvider i18n={i18n}>
+  <TranslationProvider>
     <BrowserRouter>
       <AppRoutes />
     </BrowserRouter>
-  </I18nextProvider>
+  </TranslationProvider>
 );
 
 export default App;

@@ -1,1 +1,1 @@
-export { tKeys } from './tKeys';
+export { tKeys, languages } from './tKeys';
