@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocalStorage } from 'react-use';
 
@@ -10,6 +10,14 @@ import i18n from '../../i18n';
 const NotesPreview = () => {
   const { t } = useTranslation();
   const [lng, setLng] = useLocalStorage('lng');
+
+  const [currentDate, setCurrentDate] = useState(
+    new Intl.DateTimeFormat(lng).format(new Date())
+  );
+
+  useEffect(() => {
+    setCurrentDate(new Intl.DateTimeFormat(lng).format(new Date()));
+  }, [lng]);
 
   const changeLanguage = useCallback(
     ({ target: { value } }) => {
@@ -41,6 +49,8 @@ const NotesPreview = () => {
           ))}
         </select>
       </div>
+      <hr />
+      <div>{`${t(tKeys.CURRENT_DATE)}: ${currentDate}`}</div>
       <hr />
       <div>
         <div>

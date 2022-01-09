@@ -40,7 +40,7 @@ const Notes = () => {
               type="text"
               value={title}
               onChange={({ target: { value } }) => setTitle(value)}
-              placeholder="Title"
+              placeholder={t(tKeys.TITLE)}
               required
             />
           </div>
@@ -49,7 +49,7 @@ const Notes = () => {
               type="text"
               value={description}
               onChange={({ target: { value } }) => setDescription(value)}
-              placeholder="Description"
+              placeholder={t(tKeys.DESCRIPTION)}
               required
             />
           </div>
