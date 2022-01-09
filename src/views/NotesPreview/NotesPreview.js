@@ -52,6 +52,8 @@ const NotesPreview = () => {
       <hr />
       <div>{`${t(tKeys.CURRENT_DATE)}: ${currentDate}`}</div>
       <hr />
+      <div dangerouslySetInnerHTML={{ __html: t(tKeys.PARAGRAPH_WITH_NOTE) }} />
+      <hr />
       <div>
         <div>
           {t(tKeys.OPINION, {

@@ -7,6 +7,7 @@ const pl = {
     [tKeys.TITLE]: 'Tytuł',
     [tKeys.DESCRIPTION]: 'Opis',
     [tKeys.CURRENT_DATE]: 'Obecna data',
+    [tKeys.PARAGRAPH_WITH_NOTE]: '<p>paragraf z <strong>notatką</strong></p>',
     [tKeys.OPINION_one]: '{{count}} opinia',
     [tKeys.OPINION_two]: '{{count}} opinie',
     [tKeys.OPINION_few]: '{{count}} opinii',
