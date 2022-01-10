@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { useLocalStorage } from 'react-use';
 
 import NetworkState from '../../components/NetworkState';
@@ -53,23 +53,14 @@ const NotesPreview = () => {
       <div>{`${t(tKeys.CURRENT_DATE)}: ${currentDate}`}</div>
       <hr />
       <div dangerouslySetInnerHTML={{ __html: t(tKeys.PARAGRAPH_WITH_NOTE) }} />
+      <div>
+        <Trans>{t(tKeys.PARAGRAPH_WITH_NOTE)}</Trans>
+      </div>
       <hr />
       <div>
-        <div>
-          {t(tKeys.OPINION, {
-            count: 1,
-          })}
-        </div>
-        <div>
-          {t(tKeys.OPINION, {
-            count: 2,
-          })}
-        </div>
-        <div>
-          {t(tKeys.OPINION, {
-            count: 5,
-          })}
-        </div>
+        <div>{t(tKeys.OPINION, { count: 1 })}</div>
+        <div>{t(tKeys.OPINION, { count: 2 })}</div>
+        <div>{t(tKeys.OPINION, { count: 5 })}</div>
       </div>
     </div>
   );

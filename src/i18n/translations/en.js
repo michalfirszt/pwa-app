@@ -10,9 +10,6 @@ const en = {
     [tKeys.CURRENT_DATE]: 'Current date',
     [tKeys.PARAGRAPH_WITH_NOTE]: '<p>paragraph with <strong>note</strong></p>',
     [tKeys.OPINION_one]: '{{count}} opinion',
-    [tKeys.OPINION_two]: '{{count}} opinions',
-    [tKeys.OPINION_few]: '{{count}} opinions',
-    [tKeys.OPINION_many]: '{{count}} opinions',
     [tKeys.OPINION_other]: '{{count}} opinions',
   },
 };
